@@ -12,8 +12,9 @@ class ParserCommand extends Command
 
     public function __construct(ParserService $service)
     {
-        $this->service = $service;
         parent::__construct();
-        dd($this->service, 'test');
+        $this->service = $service;
+
+        $this->service->startParse();
     }
 }
